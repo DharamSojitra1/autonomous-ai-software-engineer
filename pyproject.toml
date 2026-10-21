@@ -1,0 +1,42 @@
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomous-ai-software-engineer"
+version = "0.1.0"
+description = "An AI agent that investigates bugs, proposes code patches, and runs tests safely."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic-settings",
+    "python-dotenv",
+    "langchain",
+    "langchain-core",
+    "langgraph",
+    "langchain-groq",
+    "httpx",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["backend"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+include = ["app*"]

@@ -1,0 +1,31 @@
+# ==========================================
+# Web Framework
+# ==========================================
+fastapi
+uvicorn[standard]
+
+# ==========================================
+# Configuration and Environment
+# ==========================================
+pydantic-settings
+python-dotenv
+
+# ==========================================
+# LLM and Agent Workflow
+# ==========================================
+langchain
+langchain-core
+langgraph
+langchain-groq
+
+# ==========================================
+# HTTP Client
+# ==========================================
+httpx
+
+# ==========================================
+# Testing and Code Quality
+# ==========================================
+pytest
+pytest-asyncio
+ruff
