@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     max_upload_size_mb: int = 50
     max_archive_files: int = 2_000
     max_extracted_size_mb: int = 200
+    max_read_file_size_kb: int = 512
+    max_search_results: int = 100
+    max_search_file_size_kb: int = 512
 
 
 @lru_cache
